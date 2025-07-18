@@ -80,4 +80,8 @@ mmdc -i flowchart.mmd -o flowchart.png
 
 This will create a new `flowchart.png` with the latest flowchart. You can also view or edit the flowchart using the [Mermaid Live Editor](https://mermaid.live/).
 
+---
+
+I made a demo of using the chatbot as well—it's under `live demo.mp4` if you would like to check it out.
+
 
