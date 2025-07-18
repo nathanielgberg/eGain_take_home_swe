@@ -1,6 +1,10 @@
 # eGainTrack - Package Tracking Chatbot
 
-A command-line chatbot that helps users track packages and file claims for lost/delayed items. Built for the eGain take-home assignment to demonstrate conversation design, error handling, and user experience principles.
+A command-line chatbot that helps users track packages and file claims for lost/delayed items. 
+
+## Author
+
+**Nathaniel Greenberg** - eGain Take Home Assignment
 
 ## Features
 
@@ -54,50 +58,26 @@ The chatbot uses the last digit of tracking numbers to determine package status:
 
 ## Approach Explanation
 
-### Conversation Design Philosophy
+This chatbot was designed with a human-centered, decision-tree approach to make package tracking and claim filing as seamless and empathetic as possible. From the start, the bot personalizes the experience by using the user's name throughout the conversation, and guides users with a clear, menu-driven interface that makes navigation easy. Information is revealed progressively, so users are never overwhelmed, and contextual details—like the scheduled delivery date—are provided before asking for decisions. The flow is flexible, allowing users to file claims even for packages marked as delivered, which reflects real-world scenarios. There are multiple entry points, so users can file a claim directly or check the status first, and escalation paths are always available if human support is needed. The conversation is designed to feel natural and empathetic, acknowledging user frustration and offering solutions, while confirmation steps and a satisfaction survey ensure users feel heard and supported.
 
-I designed this chatbot with a **human-centered approach** that prioritizes:
-
-1. **Personalization**: Every interaction uses the user's name to create a more human connection
-2. **Clear Navigation**: Menu-driven interface with numbered options for easy selection
-3. **Contextual Information**: Provides relevant details (scheduled delivery date) before asking for decisions
-4. **Flexible Problem Resolution**: Allows claims even for "delivered" packages, recognizing real-world scenarios
-
-### Technical Implementation
-
-**Core Architecture:**
-- **Modular Functions**: Each feature (validation, claim collection, status checking) is separated into focused functions
-- **State Management**: Uses simple variables to maintain conversation context
-- **Input Validation**: Comprehensive validation for all user inputs with helpful error messages
-- **Predictable Testing**: Last-digit logic allows for consistent testing of all conversation paths
-
-**Error Handling Strategy:**
-- **Proactive Validation**: Validates inputs before processing
-- **Clear Feedback**: Specific error messages explain what went wrong
-- **Graceful Recovery**: Re-prompts users until valid input is received
-- **No Crashes**: Handles all edge cases to prevent program termination
-
-### Conversation Flow Design
-
-The chatbot follows a **decision tree structure** with these key principles:
-
-1. **Progressive Disclosure**: Information is revealed as needed, not overwhelming users upfront
-2. **Multiple Entry Points**: Users can file claims directly or check status first
-3. **Escalation Paths**: Always provides a way to get human support if needed
-4. **Loop Prevention**: Clear exit options at every decision point
-
-### User Experience Considerations
-
-- **Natural Language**: Conversational tone that feels human, not robotic
-- **Empathetic Responses**: Acknowledges user frustration and offers solutions
-- **Confirmation Steps**: Shows collected information before proceeding
-- **Satisfaction Measurement**: Ends with feedback collection for continuous improvement
+On the technical side, the code is organized into modular functions, each handling a specific part of the conversation, such as input validation, claim collection, or status checking. State is managed with simple variables, and all user inputs are validated with clear, helpful error messages. The last-digit logic for tracking numbers makes it easy to test all conversation paths predictably. Error handling is proactive, with the bot validating inputs before processing, providing specific feedback when something goes wrong, and re-prompting users until valid input is received. The design ensures that the chatbot never crashes, even when faced with unexpected input, and users can track multiple packages in a single session. Overall, the approach balances user experience, technical robustness, and real-world flexibility.
 
 ## Usage Examples
 
-#enter images here
+![Example Conversation 1](example_conversation1.PNG)
 
-## Author
+![Example Conversation 1](example_conversation1.PNG)
 
-**Nathaniel Greenberg** - eGain Take Home Assignment
+## Conversation Flowchart
+
+A visual flowchart of the chatbot conversation is attached as `flowchart.png` in this repository. If you would like to take a look, simply open the image file.
+
+If you find the image blurry or want to generate a higher-resolution version, you can easily regenerate it using the Mermaid source file `flowchart.mmd` with the following command:
+
+```bash
+mmdc -i flowchart.mmd -o flowchart.png
+```
+
+This will create a new `flowchart.png` with the latest flowchart. You can also view or edit the flowchart using the [Mermaid Live Editor](https://mermaid.live/).
+
 
