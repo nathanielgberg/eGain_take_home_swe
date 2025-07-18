@@ -1,0 +1,57 @@
+flowchart TD
+    A["👋 Hi there, I'm eGainTrack, your package-tracking assistant. What's your name?"] --> B{Is name valid?}
+    B -- No --> C["❌ Sorry, I didn't catch your name. Could you please type your first name?"]
+    C --> A
+    B -- Yes --> D["Nice to meet you, [name]! Are you looking to track a package today?"]
+    D --> E{User choice}
+    E -- Press 2 --> F["Okay—feel free to reach out if you need anything else."]
+    E -- Press 1 --> G["Great! Let's help you track your package, [name]."]
+    G --> H["Can you provide your tracking number?"]
+    H --> I{Is tracking number valid?}
+    I -- No --> J["❌ That doesn't look like a valid tracking number. Please try again."]
+    J --> H
+    I -- Yes --> K["According to our records, [name], your package was scheduled to arrive on July 22."]
+    K --> L["Did it arrive by then?"]
+    L --> M{User choice}
+    M -- Press 1 --> N["File a claim directly"]
+    M -- Press 2 --> O["Check current status"]
+    N --> P["Let me collect some details for your claim, [name]."]
+    P --> Q["What was in the package?"]
+    Q --> R["What's the estimated value of the package? $"]
+    R --> S["What's your email address for claim updates?"]
+    S --> T["What's your phone number for follow-up?"]
+    T --> U["Perfect! I've submitted a lost-package claim on your behalf, [name]."]
+    U --> V["You'll get an email confirmation shortly at [email]."]
+    O --> W["Got it. One sec while I check…"]
+    W --> X{Check package status by last digit}
+    X -- Last digit 0-3 --> Y["🎉 Great news, [name]! Your package was delivered successfully on July 20."]
+    X -- Last digit 4-6 --> Z["Your package is currently 'In Transit', with an expected delivery on July 25."]
+    X -- Last digit 7-9 --> AA["😔 Sorry [name], we couldn't find your package."]
+    Y --> BB["It was delivered to: [name]"]
+    BB --> CC["Did you not receive your package or was it damaged?"]
+    CC --> DD{User choice}
+    DD -- Press 1 --> EE["Sorry to hear you had an issue with your delivered package, [name]."]
+    DD -- Press 2 --> FF["Continue to satisfaction survey"]
+    EE --> P
+    Z --> GG["Would you like me to file a claim now that it's delayed?"]
+    GG --> HH{User choice}
+    HH -- Press 1 --> P
+    HH -- Press 2 --> FF
+    AA --> II["Filing a lost-package claim for you..."]
+    II --> P
+    V --> JJ["Anything else I can help with today, [name]?"]
+    JJ --> KK{User choice}
+    KK -- Press 1 --> H
+    KK -- Press 2 --> LL["Thank you for using our service, [name]!"]
+    FF --> LL
+    LL --> MM["Are you satisfied with the service today?"]
+    MM --> NN{User choice}
+    NN -- Press 1 --> OO["End conversation"]
+    NN -- Press 2 --> PP["Here is our live customer support please call at 8184241205"]
+    PP --> OO
+    style A fill:#e1f5fe
+    style F fill:#f3e5f5
+    style OO fill:#f3e5f5
+    style P fill:#fff3e0
+    style Y fill:#e8f5e8
+    style AA fill:#ffebee 

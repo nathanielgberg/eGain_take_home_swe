@@ -93,51 +93,11 @@ The chatbot follows a **decision tree structure** with these key principles:
 - **Confirmation Steps**: Shows collected information before proceeding
 - **Satisfaction Measurement**: Ends with feedback collection for continuous improvement
 
-## File Structure
-
-```
-eGain_take_home_swe/
-├── README.md                    # This file
-├── lost_package_chatbot.py      # Main chatbot implementation
-└── conversation_flowchart.md    # Visual flowchart of conversation paths
-```
-
 ## Usage Examples
 
-### Basic Flow
-```
-User: "Nathaniel"
-Bot: "Nice to meet you, Nathaniel! Are you looking to track a package today?"
-User: "1" (yes)
-Bot: "Can you provide your tracking number?"
-User: "1234567890"
-Bot: "🎉 Great news, Nathaniel! Your package was delivered successfully on July 20."
-```
-
-### Error Handling Example
-```
-User: "123" (invalid tracking number)
-Bot: "❌ That doesn't look like a valid tracking number. Please try again."
-User: "1234567890" (valid)
-Bot: [continues conversation]
-```
-
-## Future Enhancements
-
-Potential improvements for a production system:
-- Database integration for persistent claim storage
-- Email integration for claim confirmations
-- Web interface with the same conversation logic
-- Integration with real shipping carrier APIs
-- Multi-language support
-- Voice interface capabilities
+#enter images here
 
 ## Author
 
 **Nathaniel Greenberg** - eGain Take Home Assignment
 
-This project demonstrates proficiency in:
-- Conversation design and user experience
-- Error handling and input validation
-- Python programming and code organization
-- Customer service automation principles
